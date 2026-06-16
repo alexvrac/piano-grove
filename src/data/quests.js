@@ -29,7 +29,7 @@ export const QUEST_DEFINITIONS = {
   'grand-wind': {
     id: 'grand-wind',
     name: 'Le Grand Vent',
-    description: 'Jouer une pièce entière sans s&apos;arrêter (cocher le run-through)',
+    description: 'Jouer une pièce entière sans s\'apos;arrêter (cocher le run-through)',
     icon: '🍃',
     total: 1,
     xpReward: 150,
@@ -63,7 +63,7 @@ export const QUEST_DEFINITIONS = {
   'ancient-grove': {
     id: 'ancient-grove',
     name: 'Le Grove Ancien',
-    description: 'Faire pousser un arbre jusqu&apos;au stade Arbre Ancien',
+    description: 'Faire pousser un arbre jusqu\'apos;au stade Arbre Ancien',
     icon: '✨',
     total: 1,
     xpReward: 500,
