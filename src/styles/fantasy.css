@@ -1,0 +1,72 @@
+/* fantasy.css — animations et effets visuels du thème
+   Ce fichier est importé dans globals.css.
+   Il contient les keyframes (animations CSS) et les classes d'effet
+   réutilisables dans toute l'app. */
+
+/* ─── Animations ─────────────────────────────────────── */
+
+/* Apparition douce vers le haut — utilisée pour les cartes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulsation douce — pour les badges de streak */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+/* Scintillement — pour les étoiles magiques sur les arbres anciens */
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+/* Rotation lente — pour les icônes de chargement */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── Classes utilitaires ───────────────────────────── */
+
+/* Applique l'animation fadeUp à n'importe quel élément */
+.animate-fadeUp {
+  animation: fadeUp 0.4s ease both;
+}
+
+/* Délais d'animation en cascade (pour les listes de cartes) */
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.10s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.20s; }
+.delay-5 { animation-delay: 0.25s; }
+
+/* Carte générique avec fond sombre semi-transparent */
+.glass-card {
+  background: rgba(26, 51, 32, 0.6);
+  border: 1px solid rgba(82, 160, 107, 0.2);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(8px);
+}
+
+/* Texte doré pour les titres importants */
+.text-gold {
+  color: var(--color-gold-light);
+  font-family: var(--font-display);
+}
+
+/* Effet de lueur verte sur hover */
+.glow-hover {
+  transition: box-shadow 0.2s ease;
+}
+.glow-hover:hover {
+  box-shadow: 0 0 16px rgba(82, 160, 107, 0.3);
+}

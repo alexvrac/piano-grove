@@ -1,0 +1,65 @@
+/* App.module.css — mise en page générale de l'application
+   Les noms de classes ici correspondent exactement aux styles.xxx utilisés dans App.jsx.
+   Le ".module.css" signifie que ces classes sont locales à ce composant :
+   deux fichiers peuvent avoir une classe ".header" sans se marcher dessus. */
+
+.app {
+  min-height: 100vh;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid rgba(82, 160, 107, 0.2);
+  margin-bottom: 20px;
+}
+
+.appTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-gold-light);
+  letter-spacing: 0.04em;
+}
+
+.profileBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.levelBadge {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-gold);
+  font-family: var(--font-display);
+}
+
+.xpText {
+  font-size: 11px;
+  color: var(--color-forest-mist);
+  opacity: 0.8;
+}
+
+.main {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-forest-mist);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}

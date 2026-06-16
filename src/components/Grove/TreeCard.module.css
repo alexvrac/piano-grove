@@ -1,0 +1,140 @@
+.card {
+
+
+background:
+
+linear-gradient(
+145deg,
+#1b4332,
+#081c15
+);
+
+
+border:none;
+
+border-radius:25px;
+
+padding:25px;
+
+
+color:white;
+
+
+cursor:pointer;
+
+
+box-shadow:
+
+0 15px 35px #0007;
+
+
+transition:
+
+transform .2s,
+box-shadow .2s;
+
+
+text-align:center;
+
+
+}
+
+
+
+.card:hover {
+
+transform:
+
+translateY(-8px);
+
+
+box-shadow:
+
+0 20px 40px #0009;
+
+}
+
+
+
+.tree {
+
+height:130px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.card h3 {
+
+margin:10px 0 5px;
+
+font-size:22px;
+
+}
+
+
+
+.card p {
+
+opacity:.7;
+
+}
+
+
+
+.progress {
+
+
+height:12px;
+
+background:#071b12;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin:20px 0;
+
+
+}
+
+
+
+.bar {
+
+height:100%;
+
+
+background:
+
+linear-gradient(
+90deg,
+#74c69d,
+#d8f3dc
+);
+
+
+border-radius:20px;
+
+transition:.5s;
+
+
+}
+
+
+
+.status {
+
+margin-top:15px;
+
+font-size:14px;
+
+opacity:.9;
+
+}

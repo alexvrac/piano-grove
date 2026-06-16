@@ -1,0 +1,85 @@
+/* globals.css — variables CSS globales et reset
+   Ce fichier est importé UNE SEULE FOIS dans main.jsx.
+   Tout ce qui est défini ici est accessible dans toute l'app via var(--nom-variable). */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
+@import './fantasy.css';
+
+:root {
+  /* ── Palette forêt ── */
+  --color-forest-deep:  #0d1f0f;   /* fond principal, très sombre */
+  --color-forest-dark:  #1a3320;   /* cartes, panneaux */
+  --color-forest-mid:   #2d5a3d;   /* bordures, séparateurs */
+  --color-forest-light: #52a06b;   /* éléments interactifs */
+  --color-forest-mist:  #8fcca0;   /* textes secondaires */
+
+  /* ── Couleurs d'accent ── */
+  --color-gold:         #d4a843;   /* XP, niveau */
+  --color-gold-light:   #f0c46a;   /* titres importants */
+  --color-silver:       #c8d4e0;   /* texte principal */
+  --color-moonlight:    #e8eef5;   /* texte très clair */
+
+  --color-accent-purple: #7c5cbf;  /* quêtes */
+  --color-accent-rose:   #c87898;  /* évaluations, coeurs */
+  --color-accent-amber:  #d4874a;  /* alertes douces */
+
+  /* ── Typographie ── */
+  --font-display: 'Cinzel', serif;    /* titres, noms des pièces */
+  --font-body:    'Lato', sans-serif; /* tout le reste */
+
+  /* ── Arrondis ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* ── Espacements ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+}
+
+/* ─── Reset minimal ─────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Empêche le texte de grossir automatiquement sur iOS */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-forest-deep);
+  color: var(--color-moonlight);
+  min-height: 100vh;
+  /* Dégradés radiaux subtils pour l'ambiance */
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(44, 90, 61, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(124, 92, 191, 0.10) 0%, transparent 50%);
+  line-height: 1.5;
+}
+
+/* ─── Scrollbar personnalisée (Chrome/Edge) ─────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-forest-deep); }
+::-webkit-scrollbar-thumb { background: var(--color-forest-mid); border-radius: 3px; }
+
+/* ─── Focus accessible (navigation clavier) ─────────── */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ─── Respect du mode "réduire les animations" ──────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
